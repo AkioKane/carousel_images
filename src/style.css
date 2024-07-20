@@ -65,8 +65,28 @@ img {
   border-radius: 3px 0 0 3px;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
   height: 100%;
-  width: 1em;
+  width: 1.5em;
+  background-color: var(--btn-color);
+  animation: slide 1s;
+}
+
+.btn-swipe {
+  display: none;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  height: 100%;
+  width: 1.5em;
   background-color: var(--btn-color);
   animation: slide 1s;
 }
@@ -91,7 +111,7 @@ img {
 
 @keyframes slide {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-50vh);
   }
 
   100% {
@@ -107,6 +127,6 @@ img {
 
   100% {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(-50vh);
   }
 }

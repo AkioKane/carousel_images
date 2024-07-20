@@ -1,19 +1,22 @@
 function btnClick() {
   const btnActive = document.querySelector(".btn-start")
+  const btnSwipe = document.querySelector(".btn-swipe")
 
   btnActive.addEventListener("click", () => {
     if (btnActive.classList.contains("btn-start")) {
-      btnActive.innerHTML = "<"
+      btnActive.innerHTML = "close"
+      btnSwipe.style.display = "flex"
 
       btnActive.classList.remove("btn-start")
       btnActive.classList.add("btn-menu")
       imageShow("flex")
     } else if (btnActive.classList.contains("btn-menu")) {
-      imageShow("none")
       btnActive.innerHTML = "Click"
+      btnSwipe.style.display = "none"
 
       btnActive.classList.remove("btn-menu")
       btnActive.classList.add("btn-start")
+      imageShow("none")
     }
   })
 }
@@ -33,6 +36,8 @@ function imageShow(block) {
     images.style.display = block
   }
 }
+
+
 
 module.exports = {
   btnClick
