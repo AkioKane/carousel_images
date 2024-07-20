@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "Lato";
+  src: url("./fonts/Lato/Lato-Regular.ttf");
+}
+
+:root {
+  --main-bg: #111827;
+  --btn-color: #e7e5e4;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  height: 8em;
+  width: 8em;
+}
+
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-bg);
+  font-family: "Lato";
+  min-height: 100vh;
+}
+
+.images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 8em;
+  width: 50%;
+}
+
+.images {
+  display: none;
+  animation: slide 1s;
+}
+
+.close {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: close 1s;
+}
+
+.btn-start {
+  display: flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  width: 5em;
+  background-color: var(--btn-color);
+}
+
+.btn-menu {
+  display: flex;
+  border: none;
+  border-radius: 3px 0 0 3px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 1em;
+  background-color: var(--btn-color);
+  animation: slide 1s;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.btn-active {
+  animation: show 1s;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
