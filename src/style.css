@@ -38,7 +38,8 @@ img {
   width: 50%;
 }
 
-.images {
+.images,
+.images-2 {
   display: none;
   animation: slide 1s;
 }
@@ -72,7 +73,6 @@ img {
   height: 100%;
   width: 1.5em;
   background-color: var(--btn-color);
-  animation: slide 1s;
 }
 
 .btn-swipe {
@@ -96,7 +96,7 @@ img {
 }
 
 .btn-active {
-  animation: show 1s;
+  animation: slide 1s;
 }
 
 @keyframes show {
